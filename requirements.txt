@@ -1,0 +1,5 @@
+pandas
+requests
+nltk
+matplotlib
+wordcloud
