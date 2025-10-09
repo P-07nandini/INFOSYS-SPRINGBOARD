@@ -92,7 +92,7 @@ def main(query, pagesize=100):
     # Save to CSV
     df = pd.DataFrame(data)
     df.to_csv("news_sentiment_results.csv", index=False)
-    print("✅ Results saved to news_sentiment_results.csv")
+    print(" Results saved to news_sentiment_results.csv")
 
     # Plot sentiment distribution
     plt.figure(figsize=(6, 4))
@@ -126,10 +126,6 @@ def main(query, pagesize=100):
     plt.show()
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        query = sys.argv[1]
-        pagesize = int(sys.argv[2]) if len(sys.argv) > 2 else 5
-        main(query, pagesize)
-    else:
-        # Default if no arguments are passed
-        main("AI technology", 100)
+    query = "AI technology"
+    pagesize = 50
+    main(query, pagesize)
